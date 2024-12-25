@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wide Format Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 2rem; color: darkmagenta;">Cloud Crafters</h1>
+        <h1>Weather App</h1>
+        
+       
+        <div class="input-section">
+            <input type="text" id="location" placeholder="Enter location">
+            <button onclick="fetchWeather()">Get Weather</button>
+            
+        </div>
+        
+        <div class="unit-toggle">
+            <label>
+                <input type="radio" name="unit" value="metric" checked onchange="updateUnit()"> °C
+            </label>
+            <label>
+                <input type="radio" name="unit" value="imperial" onchange="updateUnit()"> °F
+            </label>
+        </div>
+        
+       
+        <div id="loader" class="loader" style="display: none;"></div>
+        
+        
+        <div class="weather-content">
+            
+            <div id="current-weather" class="current-weather"></div>
+            
+            
+            <div id="forecast" class="forecast"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
